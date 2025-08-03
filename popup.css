@@ -1,0 +1,111 @@
+body {
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.notification-interval-wrapper,
+.language-wrapper,
+.notification-duration-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+}
+
+select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #111827;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23666' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  padding-right: 40px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: "Segoe UI", sans-serif;
+}
+
+select:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+select:hover {
+  border-color: #9ca3af;
+  cursor: pointer;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Segoe UI", sans-serif;
+  min-width: 100px;
+}
+
+#start {
+  background-color: #2563eb;
+}
+
+#start:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+#start:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4); /* Blue glow */
+}
+
+#stop {
+  background-color: rgba(240, 21, 21, 0.909);
+}
+
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl select {
+  text-align: right;
+  background-position: left 10px center;
+}

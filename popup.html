@@ -11,7 +11,7 @@
 
 <body>
   <div class="container">
-    <h2 class="title" data-i18n="title">Quran Verse Notifier</h2>
+    <h2 class="title" data-i18n="title">Quran & Dua Reminder</h2>
     <div class="notification-interval-wrapper">
       <label for="interval" data-i18n="interval_label">Notification Interval:</label>
       <select id="interval">
@@ -22,7 +22,7 @@
         <option value="120" data-i18n="interval_2m">2 minutes</option>
         <option value="180" data-i18n="interval_3m">3 minutes</option>
         <option value="3600" data-i18n="interval_1h">1 hour</option>
-    </select>
+      </select>
     </div>
     <div class="notification-duration-wrapper">
       <label for="duration" data-i18n="duration_label">Notification Duration:</label>
@@ -33,15 +33,23 @@
         <option value="30" data-i18n="duration_30s">30 seconds</option>
         <option value="40" data-i18n="duration_40s">40 seconds</option>
         <option value="60" data-i18n="duration_1m">1 minute</option>
-    </select>
+      </select>
+    </div>
+
+    <div class="content-wrapper">
+      <label for="content" data-i18n="content_label">Content Type:</label>
+      <select id="content">
+        <option value="verse" data-i18n="content_verse">Quran Verse</option>
+        <option value="dua" data-i18n="content_dua">Dua</option>
+      </select>
     </div>
 
     <div class="language-wrapper">
       <label for="language" data-i18n="language_label">Language:</label>
       <select id="language">
-        <option value="ar">Arabic</option>
-        <option value="en">English</option>
-        <option value="fr">French</option>
+        <option value="ar" data-i18n="language_ar">Arabic</option>
+        <option value="en" data-i18n="language_en">English</option>
+        <option value="fr" data-i18n="language_fr">French</option>
       </select>
     </div>
 

@@ -1,8 +1,11 @@
 {
     "en": {
-        "title": "Quran Verse Notifier",
+        "title": "Quran & Dua Reminder",
         "interval_label": "Notification Interval:",
         "duration_label": "Notification Duration:",
+        "content_label": "Content Type:",
+        "content_dua": "Dua",
+        "content_verse": "Quran Verse",
         "language_label": "Language:",
         "start_button": "Start",
         "stop_button": "Stop",
@@ -18,12 +21,18 @@
         "duration_20s": "20 seconds",
         "duration_30s": "30 seconds",
         "duration_40s": "40 seconds",
-        "duration_1m": "1 minute"
+        "duration_1m": "1 minute",
+        "language_ar": "Arabic",
+        "language_en": "English",
+        "language_fr": "French"
     },
     "ar": {
-        "title": "مُخطر آيات القرآن",
+        "title":  "تذكير بالقرآن والدعاء",
         "interval_label": "الفاصل الزمني للإشعارات:",
         "duration_label": "مدة الإشعار:",
+        "content_verse": "آية قرآنية",
+        "content_label": "نوع المحتوى:",
+        "content_dua": "دعاء",
         "language_label": "اللغة:",
         "start_button": "بدء",
         "stop_button": "إيقاف",
@@ -39,12 +48,18 @@
         "duration_20s": "20 ثانية",
         "duration_30s": "30 ثانية",
         "duration_40s": "40 ثانية",
-        "duration_1m": "دقيقة واحدة"
+        "duration_1m": "دقيقة واحدة",
+        "language_ar": "العربية",
+        "language_en": "الإنجليزية",
+        "language_fr": "الفرنسية"
     },
     "fr": {
-        "title": "Notificateur de Versets du Coran",
+        "title": "Rappel du Coran et des Douas",
         "interval_label": "Intervalle de notification :",
         "duration_label": "Durée de la notification :",
+        "content_verse": "Verset du Coran",
+        "content_label": "Type de contenu :",
+        "content_dua": "Doua",
         "language_label": "Langue :",
         "start_button": "Démarrer",
         "stop_button": "Arrêter",
@@ -60,6 +75,9 @@
         "duration_20s": "20 secondes",
         "duration_30s": "30 secondes",
         "duration_40s": "40 secondes",
-        "duration_1m": "1 minute"
+        "duration_1m": "1 minute",
+        "language_ar": "Arabe",
+        "language_en": "Anglais",
+        "language_fr": "Français"
     }
 }

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const intervalSelect = document.getElementById("interval");
   const durationSelect = document.getElementById("duration"); // <— FIXED
   const languageSelect = document.getElementById("language");
+  const contentSelect = document.getElementById("content");
+
   const htmlElement = document.documentElement;
 
   // Load translations
@@ -44,13 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Load saved settings
-  chrome.storage.local.get(["interval", "duration", "language"], (data) => {
-    if (data.interval) intervalSelect.value = data.interval;
-    if (data.duration) durationSelect.value = data.duration;
-    const language = data.language || "en";
-    languageSelect.value = language;
-    loadTranslations(language); // Apply translations on load
-  });
+  chrome.storage.local.get(
+    ["interval", "duration", "language", "content"],
+    (data) => {
+      if (data.interval) intervalSelect.value = data.interval;
+      if (data.duration) durationSelect.value = data.duration;
+      if (data.content) contentSelect.value = data.content;
+      const language = data.language || "en";
+      languageSelect.value = language;
+      loadTranslations(language); // Apply translations on load
+    }
+  );
 
   // Update UI and save settings when language changes
   languageSelect.addEventListener("change", () => {
@@ -61,17 +67,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Save content type when changed
+  contentSelect.addEventListener("change", () => {
+    const content = contentSelect.value;
+    chrome.storage.local.set({ content }, () => {
+      console.log("Content type saved:", content);
+    });
+  });
+
   startButton.addEventListener("click", () => {
     const interval = parseInt(intervalSelect.value, 10);
     const duration = parseInt(durationSelect.value, 10); // <— FIXED
     const language = languageSelect.value;
-
-    chrome.storage.local.set({ interval, duration, language });
+    const content = contentSelect.value;
+    console.log("content", content);
+    chrome.storage.local.set({ interval, duration, language, content });
     chrome.runtime.sendMessage({
       action: "start",
       interval,
       duration,
       language,
+      content,
     });
   });
 

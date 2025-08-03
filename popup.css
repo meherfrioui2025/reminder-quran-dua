@@ -2,6 +2,7 @@ body {
   width: 300px;
   padding: 10px;
   font-family: Arial, sans-serif;
+  
 }
 
 .container {
@@ -14,11 +15,13 @@ body {
   font-family: "Pacifico", cursive;
   font-weight: bold;
   font-style: normal;
+  font-size: 20px;
 }
 
 .notification-interval-wrapper,
 .language-wrapper,
-.notification-duration-wrapper {
+.notification-duration-wrapper,
+.content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -98,7 +101,6 @@ button {
 #stop {
   background-color: rgba(240, 21, 21, 0.909);
 }
-
 
 .rtl {
   direction: rtl;

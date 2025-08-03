@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quran Verse Notifier</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title" data-i18n="title">Quran Verse Notifier</h2>
+    <div class="notification-interval-wrapper">
+      <label for="interval" data-i18n="interval_label">Notification Interval:</label>
+      <select id="interval">
+        <option value="5" data-i18n="interval_5s">5 seconds</option>
+        <option value="10" data-i18n="interval_10s">10 seconds</option>
+        <option value="20" data-i18n="interval_20s">20 seconds</option>
+        <option value="60" data-i18n="interval_1m">1 minute</option>
+        <option value="120" data-i18n="interval_2m">2 minutes</option>
+        <option value="180" data-i18n="interval_3m">3 minutes</option>
+        <option value="3600" data-i18n="interval_1h">1 hour</option>
+    </select>
+    </div>
+    <div class="notification-duration-wrapper">
+      <label for="duration" data-i18n="duration_label">Notification Duration:</label>
+      <select id="duration">
+        <option value="5" data-i18n="duration_5s">5 seconds</option>
+        <option value="10" data-i18n="duration_10s">10 seconds</option>
+        <option value="20" selected data-i18n="duration_20s">20 seconds</option>
+        <option value="30" data-i18n="duration_30s">30 seconds</option>
+        <option value="40" data-i18n="duration_40s">40 seconds</option>
+        <option value="60" data-i18n="duration_1m">1 minute</option>
+    </select>
+    </div>
+
+    <div class="language-wrapper">
+      <label for="language" data-i18n="language_label">Language:</label>
+      <select id="language">
+        <option value="ar">Arabic</option>
+        <option value="en">English</option>
+        <option value="fr">French</option>
+      </select>
+    </div>
+
+    <div class="btn-wrapper">
+      <button id="start" data-i18n="start_button">Start</button>
+      <button id="stop" data-i18n="stop_button">Stop</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
